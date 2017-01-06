@@ -1,4 +1,4 @@
-#include "stdafx.h"
+п»ї#include "stdafx.h"
 #include <iostream>
 #include <string>
 
@@ -13,7 +13,7 @@ void main()
 	char c;
 	int len = strlen(chars) - 1;
 	//int i = -1;
-	cout << "Строка:" << chars << endl << "Введите символ:";
+	cout << "РЎС‚СЂРѕРєР°:" << chars << endl << "Р’РІРµРґРёС‚Рµ СЃРёРјРІРѕР»:";
 	cin >> c;
 	_asm
 	{
@@ -26,11 +26,11 @@ void main()
 		cmp chars[esi], al
 		jne find_char
 
-		//т.к. за заданным, а не с него, еще +1
+		//С‚.Рє. Р·Р° Р·Р°РґР°РЅРЅС‹Рј, Р° РЅРµ СЃ РЅРµРіРѕ, РµС‰Рµ +1
 		inc esi
 
 		cmp esi, edi
-		//если больше или равно
+		//РµСЃР»Рё Р±РѕР»СЊС€Рµ РёР»Рё СЂР°РІРЅРѕ
 		jge out_chars
 
 		replace:
@@ -44,7 +44,7 @@ void main()
 		dec edi
 
 		cmp esi, edi
-		//если меньше и не равно
+		//РµСЃР»Рё РјРµРЅСЊС€Рµ Рё РЅРµ СЂР°РІРЅРѕ
 		jl replace
 
 		out_chars:
